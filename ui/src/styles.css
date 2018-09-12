@@ -1,0 +1,271 @@
+/* You can add global styles to this file, and also import other style files */
+.list-area {
+    position: relative !important;
+    z-index: 999 !important;
+}
+
+.btn-xs {
+    font-size: 18px;
+    border-radius: 3px;
+    padding: 1px 9px;
+}
+.alert-msg{
+    text-align: center;
+    width: 80%;
+    margin: 1% 1%;
+    color: green;
+    font-size: 16px;
+}
+.selected-menu{
+    background: #31708f;
+    border-radius: 4px;
+}
+
+.alert{
+    margin-bottom: 0px;
+    text-align: center;
+    font-size: 16px;
+  }
+.alert button.close {
+   
+    right: 20px;
+
+}
+
+.header-card {
+    border-radius: 2px;
+    border-top: 4px solid #8CDDCD;
+    box-shadow: 0 2px 1px rgba(0, 0, 0, 0.05);
+    border-left: none;
+    border-right: none;
+    border-bottom: none;
+    margin-bottom: 30px;
+}
+body {
+   color:  #212529 !important;
+}
+
+
+.btn-mini {
+    padding: 8px 10px;
+    line-height: 14px;
+    font-size: 10px;
+}
+
+.btn-md {
+     padding: 4px 10px;
+}
+.btn-inverse:hover {
+    background-color: #46627f;
+    border-color: #46627f;
+    color: #333;
+}
+
+.btn-inverse {
+    background-color: #34495e;
+    border-color: #34495e;
+    color: #fff;
+    cursor: pointer;
+    transition: all ease-in 0.3s;
+}
+.btn-login {
+    background-color: #111;
+    border-color: #111;
+    color: #fff;
+    cursor: pointer;
+    transition: all ease-in 0.3s;
+}
+.btn-login:hover {
+    background-color: #46627f;
+    border-color: #46627f;
+    color: #fff;
+}
+
+.logo {
+    background: #2C3E50;
+}
+.navbar-default {
+    background: #2C3E50;
+}
+.text-inverse {
+    color:  #2C3E50;
+}
+.navbar-right ul li a {
+    color: #fff!important;
+}
+.navbar-right ul li .dropdown-menu a {
+    color: #2C3E50!important;
+}
+
+
+.btn-warning:hover {
+    background-color: #f0ad4e;
+    border-color: #f0ad4e;
+    color: #fff;
+}
+
+.btn-warning {
+    background-color: #f0ad4e;
+    border-color: #f0ad4e;
+    color: #fff;
+    cursor: pointer;
+    transition: all ease-in 0.3s;
+}
+
+
+/* login screen */
+
+
+.login {
+    -webkit-box-align: center;
+    -ms-flex-align: center;
+    align-items: center;
+    background-color: #2196F3;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    height: 100%;
+    position: fixed;
+    text-align: center;
+    width: 100%;
+}
+
+.auth-fluid {
+    margin: 0 auto;
+}
+
+.row {
+    display: -ms-flexbox;
+    display: -webkit-box;
+    display: flex;
+    -ms-flex-wrap: wrap;
+    flex-wrap: wrap;
+    margin-right: -15px;
+    margin-left: -15px;
+}
+
+@media (min-width: 576px)
+.col-sm-12 {
+    -webkit-box-flex: 0;
+    -ms-flex: 0 0 100%;
+    flex: 0 0 100%;
+    max-width: 100%;
+}
+
+.login-card {
+    border-radius: 30px;
+    position: relative;
+    display: block;
+}
+.auth-body {
+    min-width: 450px;
+}
+
+.common-img-bg {
+    background-size: cover;
+    background: url(sync2.png) no-repeat center center fixed;
+    height: 100%;
+}
+.bg-primary {
+    background-color: #eee !important;
+    color: #fff;
+}
+.card-body {
+    -ms-flex: 1 1 auto;
+    -webkit-box-flex: 1;
+    flex: 1 1 auto;
+    padding: 1.25rem;
+}
+.auth-box {
+    background-color: #fff;
+    border-radius: 8px;
+    margin: 20px 0 50px 0;
+    padding: 20px;
+}
+
+.card-body {
+    -ms-flex: 1 1 auto;
+    -webkit-box-flex: 1;
+    flex: 1 1 auto;
+    padding: 1.25rem;
+}
+
+.input-group {
+    position: relative;
+    display: -ms-flexbox;
+    display: -webkit-box;
+    display: flex;
+    width: 100%;
+}
+.input-group {
+    margin-bottom: 1.25em;
+}
+
+
+.logo-img img {
+    border-radius: 50% 
+}
+
+
+/* model window styles*/
+
+.modal {
+    /* This way it could be display flex or grid or whatever also. */
+    display: block;
+    /* Probably need media queries here */
+    width: 55%;
+    max-width: 100%;
+    height: 75%;
+    max-height: 100%;
+    position: fixed;
+    z-index: 9000;
+    left: 54%;
+    top: 50%;
+    /* Use this for centering if unknown width/height */
+    transform: translate(-50%, -50%);
+    /* If known, negative margins are probably better (less chance of blurry text). */
+    /* margin: -200px 0 0 -200px; */
+    background: white;
+    box-shadow: 0 0 60px 10px rgba(0, 0, 0, 0.9);
+    border-radius: 10px;
+}
+ 
+.modal-content {
+    position: absolute;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    overflow: auto;
+    border: none;
+}
+ 
+.modal-overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 8000;
+    background: rgba(0, 0, 0, 0.6);
+}
+.model-card {
+    border-radius: 2px;
+    border-top: 4px solid #8CDDCD;
+    box-shadow: 0 2px 1px rgba(0, 0, 0, 0.05);
+    border-left: none;
+    border-right: none;
+    border-bottom: none;
+    margin-bottom: 30px;
+    padding: 8px 10px;
+}
+.padding-top-5 {
+ padding-top: 6px;
+}
+.padding-right-0 {
+    padding-right:0px
+}
+
+.selected-list .c-btn {
+    padding: 8px 12px !important;
+    box-shadow: none !important;
+}

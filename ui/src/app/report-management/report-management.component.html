@@ -1,0 +1,156 @@
+<div class="main-content ">
+  <div class="container-fluid ">
+    <div class="row">
+      <div class="col-md-12">
+        <div class="header">
+          <h4 class="title">Import Employees Data -- Have to implement </h4>
+        </div>
+      </div>
+    </div>
+
+
+    <div class="col-md-12 ">
+      <form name="form" (ngSubmit)="f.form.valid && saveSkill()" #f="ngForm" novalidate>
+        <div class="row card model-card">
+          <div class="col-md-6">
+            <div class="card">
+              <div class="content">
+                <div class="row">
+                  <div class="col-md-8">
+                    <div class="form-group" [ngClass]="{ 'has-error': f.submitted }">
+                      <label>Filter By Domains</label>
+                      <angular2-multiselect (click)="$event.preventDefault()" [ngModelOptions]="{standalone: true}" [data]="domainsList" name="domainsList"
+                        [(ngModel)]="selectedDomains" [settings]="domainSettings" (onSelect)="onSelectDomain(selectedDomains)"
+                        (onDeSelect)="onSelectDomain(selectedDomains)"></angular2-multiselect>
+                    </div>
+                  </div>
+                </div>
+
+                <div class="row">
+                  <div class="col-md-8">
+                    <div class="form-group" [ngClass]="{ 'has-error': f.submitted }">
+                      <label>Filter By Categories</label>
+                      <angular2-multiselect (click)="$event.preventDefault()" [ngModelOptions]="{standalone: true}" [data]="categoriesList" name="categoriesList"
+                        [(ngModel)]="selectedCatgs" [settings]="categorySettings" (onSelect)="onSelectCategory(selectedCatgs)"
+                        (onDeSelect)="onSelectCategory(selectedCatgs)"></angular2-multiselect>
+                    </div>
+                  </div>
+                </div>
+
+              </div>
+            </div>
+          </div>
+
+          <div class="col-md-6">
+            <div class="card">
+              <div class="content">
+                <div class="row">
+                  <div class="col-md-9">
+                    <div class="form-group" [ngClass]="{ 'has-error': f.submitted }">
+                      <label>Filter By Skills </label>
+                      <angular2-multiselect (click)="$event.preventDefault()" [ngModelOptions]="{standalone: true}" [data]="skillsList" name="skillsList"
+                        [(ngModel)]="selectedSkills" [settings]="skillSettings"></angular2-multiselect>
+                    </div>
+                  </div>
+                </div>
+
+                <div class="row">
+                  <div class="col-md-9">
+                    <div class="form-group" [ngClass]="{ 'has-error': f.submitted }">
+                      <label>Filter By Manager</label>
+                      <angular2-multiselect (click)="$event.preventDefault()" [ngModelOptions]="{standalone: true}" [data]="managersList" name="managersList"
+                        [(ngModel)]="selectedManagers" [settings]="managerSettings" (onSelect)="onSelectManager(selectedManagers)"
+                        (onDeSelect)="onSelectManager(selectedManagers)"></angular2-multiselect>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="col-md-12">
+          <div class="col-md-8">
+            <div class="alert-msg">
+              <app-alert></app-alert>
+            </div>
+          </div>
+          <div class="col-md-4">
+            <div class="form-group pull-right">
+              <button type="submit" [disabled]="f.form.invalid " class="btn btn-inverse btn-mini ">
+                <span class="h6">Get Employees Details</span>
+              </button>
+            </div>
+          </div>
+        </div>
+        <div class="clearfix"></div>
+      </form>
+    </div>
+  </div>
+</div>
+
+
+
+<!-- 
+<div class="main-content ">
+  <div class="main-content  container-fluid card">
+    <form name="form" (ngSubmit)="f.form.valid && saveSkill()" #f="ngForm" novalidate>
+      <div class="row">
+        <div class="col-md-12">
+          <div class="card">
+            <div class="header">
+              <h4 class="title">Import Employees Data</h4>
+            </div>
+            <div class="content">
+              <div class="row">
+                <div class="col-md-4">
+                  <div class="form-group">
+                    <label>Filter By Domains </label>
+                    <angular2-multiselect (click)="$event.preventDefault()" [ngModelOptions]="{standalone: true}" [data]="domainsList" name="domainsList"
+                      [(ngModel)]="selectedDomains" [settings]="domainSettings" (onSelect)="onSelectDomain(selectedDomains)"
+                      (onDeSelect)="onSelectDomain(selectedDomains)"></angular2-multiselect>
+                  </div>
+                </div>
+                <div class="col-md-1"></div>
+                <div class="col-md-4">
+                  <div class="form-group">
+                    <label>Filter By Categories</label>
+                    <angular2-multiselect (click)="$event.preventDefault()" [ngModelOptions]="{standalone: true}" [data]="categoriesList" name="categoriesList"
+                      [(ngModel)]="selectedCatgs" [settings]="categorySettings" (onSelect)="onSelectCategory(selectedCatgs)"
+                      (onDeSelect)="onSelectCategory(selectedCatgs)"></angular2-multiselect>
+                  </div>
+                </div>
+              </div>
+
+              <div class="row">
+                <div class="col-md-4">
+                  <div class="form-group">
+                    <label>Filter By Skills </label>
+                    <angular2-multiselect (click)="$event.preventDefault()" [ngModelOptions]="{standalone: true}" [data]="skillsList" name="skillsList"
+                      [(ngModel)]="selectedSkills" [settings]="skillSettings"></angular2-multiselect>
+                  </div>
+                </div>
+                <div class="col-md-1"></div>
+                <div class="col-md-4">
+                  <div class="form-group">
+                    <label>Filter By Manager</label>
+                    <angular2-multiselect (click)="$event.preventDefault()" [ngModelOptions]="{standalone: true}" [data]="managersList" name="managersList"
+                      [(ngModel)]="selectedManagers" [settings]="managerSettings" (onSelect)="onSelectManager(selectedManagers)"
+                      (onDeSelect)="onSelectManager(selectedManagers)"></angular2-multiselect>
+                  </div>
+                </div>
+              </div>
+              <div class="row">
+                <div class="col-md-4">
+                  <div class="form-group">
+                    <button class=" btn btn-info btn-fill">Get Employees Details</button>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </form>
+  </div>
+</div> -->

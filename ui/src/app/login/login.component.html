@@ -1,0 +1,124 @@
+      	<!-- <div class="row" style="margin-top:40px">
+			  
+			<div class="col-sm-6 col-md-4 col-md-offset-4">
+				<div class="panel panel-default">
+					<div class="panel-heading">
+						<strong> Sign in to Sync Skill</strong>
+					</div>
+					<div class="panel-body">
+						<form role="form" action="#" method="POST">
+							<fieldset>
+								<div class="row">
+									<div class="center-block">
+										<img class="profile-img"
+											src="assets/img/logo.png" alt="">
+									</div>
+								</div>
+								<div class="row">
+									<div class="col-sm-12 col-md-10  col-md-offset-1 ">
+										<form name="form" (ngSubmit)="f.form.valid && login()" #f="ngForm" novalidate>
+												<div class="form-group" [ngClass]="{ 'has-error': f.submitted && !username.valid }">
+													<label for="username">Username</label>
+													<input type="text" class="form-control" name="username" [(ngModel)]="model.username" #username="ngModel" required />
+													<div *ngIf="f.submitted && !username.valid" class="help-block">Username is required</div>
+												</div>
+												<div class="form-group" [ngClass]="{ 'has-error': f.submitted && !password.valid }">
+													<label for="password">Password</label>
+													<input type="password" class="form-control" name="password" [(ngModel)]="model.password" #password="ngModel" required />
+													<div *ngIf="f.submitted && !password.valid" class="help-block">Password is required</div>
+												</div>
+												
+											<div class="row">
+												<div class="col-md-8 pull-right">
+													<div class="form-group">
+														<button [disabled]="loading" class="btn btn-primary">Login</button>
+													    <img *ngIf="loading" src="data:image/gif;base64,R0lGODlhEAAQAPIAAP///wAAAMLCwkJCQgAAAGJiYoKCgpKSkiH/C05FVFNDQVBFMi4wAwEAAAAh/hpDcmVhdGVkIHdpdGggYWpheGxvYWQuaW5mbwAh+QQJCgAAACwAAAAAEAAQAAADMwi63P4wyklrE2MIOggZnAdOmGYJRbExwroUmcG2LmDEwnHQLVsYOd2mBzkYDAdKa+dIAAAh+QQJCgAAACwAAAAAEAAQAAADNAi63P5OjCEgG4QMu7DmikRxQlFUYDEZIGBMRVsaqHwctXXf7WEYB4Ag1xjihkMZsiUkKhIAIfkECQoAAAAsAAAAABAAEAAAAzYIujIjK8pByJDMlFYvBoVjHA70GU7xSUJhmKtwHPAKzLO9HMaoKwJZ7Rf8AYPDDzKpZBqfvwQAIfkECQoAAAAsAAAAABAAEAAAAzMIumIlK8oyhpHsnFZfhYumCYUhDAQxRIdhHBGqRoKw0R8DYlJd8z0fMDgsGo/IpHI5TAAAIfkECQoAAAAsAAAAABAAEAAAAzIIunInK0rnZBTwGPNMgQwmdsNgXGJUlIWEuR5oWUIpz8pAEAMe6TwfwyYsGo/IpFKSAAAh+QQJCgAAACwAAAAAEAAQAAADMwi6IMKQORfjdOe82p4wGccc4CEuQradylesojEMBgsUc2G7sDX3lQGBMLAJibufbSlKAAAh+QQJCgAAACwAAAAAEAAQAAADMgi63P7wCRHZnFVdmgHu2nFwlWCI3WGc3TSWhUFGxTAUkGCbtgENBMJAEJsxgMLWzpEAACH5BAkKAAAALAAAAAAQABAAAAMyCLrc/jDKSatlQtScKdceCAjDII7HcQ4EMTCpyrCuUBjCYRgHVtqlAiB1YhiCnlsRkAAAOwAAAAAAAAAAAA==" />
+												
+													</div>
+												</div>
+												
+											</div>
+
+											<div class="row">
+												<div class="alert.msg">
+													 <app-alert></app-alert>
+												</div>
+											</div>
+											<div class="clearfix"></div>   
+										</form>
+									</div>
+								</div>
+							</fieldset>
+						</form>
+					</div>
+			
+                </div>
+			</div>
+		</div> -->
+
+
+
+		<section class="login p-fixed d-flex text-center bg-primary common-img-bg">
+				<!-- starts -->
+				<div class="auth-fluid">
+				  <div class="row">
+					<div class="col-sm-12">
+					  <!-- Authentication card start -->
+					  <div class="login-card card-body auth-body">
+						<form [formGroup]="form" (ngSubmit)="f.form.valid && login()" #f="ngForm">
+						  <div class="text-center">
+							<div class="center-block">
+								<img class="profile-img"
+									src="assets/img/logo.png" alt="">
+							</div>
+						  </div>
+						  <div class="auth-box">
+							<div class="row m-b-20">
+							  <div class="col-md-12">
+								<h3 class="text-inverse text-center txt-primary">Sync Skill</h3>
+							  </div>
+							  
+							</div>
+						
+							<p class="text-inverse b-b-default text-left p-b-5">Sign in with your username or email</p>
+							<div class="input-group">
+							  <input type="text" class="form-control" id="username" formControlName="username"  [(ngModel)]="model.username"  placeholder="Username">
+							  <span class="md-line"></span>
+							</div>
+							<div class="input-group">
+							  <input type="password"  id="password" class="form-control"  formControlName="password" [(ngModel)]="model.password"   placeholder="password">
+							  <span class="md-line"></span>
+							</div>
+							
+							<div class="row m-t-30">
+							  <div class="col-md-12">
+								<button [disabled]="!form.valid" class="btn btn-login btn-md btn-block waves-effect text-center m-b-20">Submit</button>
+							  </div>
+							</div>
+
+							<div class="input-group text-left">
+								<div class="text-left col-sm-6 col-xs-12 forgot-phone ">
+										<!-- <a routerLink="/uploademployee">
+											<i tooltip="Export Employee Data"
+											[tooltipDisabled]="false"
+											[tooltipAnimation]="true"
+											tooltipPlacement="left" class="fa fa-cloud-upload"></i>
+											</a> -->
+									<a routerLink="/forgotpassword" class="f-w-600 text-inverse"> Forget Password?</a>
+								</div>
+							</div>
+
+							<div class="row ">
+								<div class="alert.msg col-sm-12">
+										<app-alert></app-alert>
+								</div>
+							</div>
+							<div class="clearfix"></div>  
+						  </div>
+						</form>
+						
+					  </div>
+					</div>
+				  </div>
+				</div>
+			  </section>

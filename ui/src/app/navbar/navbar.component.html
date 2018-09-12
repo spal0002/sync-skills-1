@@ -1,0 +1,52 @@
+<nav class="navbar navbar-default">
+    <div class="container-fluid">
+
+        <div class="navbar-collapse collapse navbar-right" id="navbar-main">
+            <ul class="nav navbar-nav ">
+                
+                <li>
+                    <a href="#" (click)="downloadEmpData($event)">
+                        <i tooltip="Import Employee Data"
+                        [tooltipDisabled]="false"
+                        [tooltipAnimation]="true"
+                        tooltipPlacement="left" class="fa fa-cloud-download"></i>
+                    </a>
+                </li>
+                <li>
+                    <a routerLink="/uploademployee">
+                        <i tooltip="Export Employee Data"
+                        [tooltipDisabled]="false"
+                        [tooltipAnimation]="true"
+                        tooltipPlacement="left" class="fa fa-cloud-upload"></i>
+                        </a>
+                </li>
+
+                <li>
+
+                    <a routerLink="/reports">
+                        <i tooltip="Download Employee Data Reports Wise"
+                        [tooltipDisabled]="false"
+                        [tooltipAnimation]="true"
+                        tooltipPlacement="left" class="fa fa-download"></i>
+                    </a>                     
+                </li>
+                <li class="dropdown">
+                    <a href="#" class="dropdown-toggle" data-toggle="dropdown">
+                           <p>
+                             Welcome <span>{{ applicationService.title}}</span>
+                            <b class="caret"></b>
+                        </p>
+                    </a>
+                    <ul class="dropdown-menu">
+                        <li><a routerLink="/profile">Account</a></li>
+                        <li><a routerLink="/changepassword">Change Password</a></li>
+                        <li><a (click)="logout()">Logout</a></li>
+                        <li class="divider"></li>
+                    </ul>
+                </li>
+                <li class="separator hidden-lg hidden-md"></li>
+            </ul>
+
+        </div>
+    </div>
+</nav>
